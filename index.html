@@ -32,7 +32,7 @@
     </style>
   </head>
   <body>
-    <header class="header open" id="header">
+    <header class="header" id="header">
       <svg
         class="header__logo logo"
         width="148"
@@ -66,7 +66,7 @@
         <img src="images/icon-hamburger.svg" alt="" id="hamburger" />
         <img src="images/icon-close.svg" alt="" id="close" />
       </div>
-      <nav class="header__nav open" id="nav">
+      <nav class="header__nav" id="nav">
         <ul>
           <li>Features</li>
           <li>Pricing</li>
@@ -105,10 +105,25 @@
         </p>
       </div>
       <div class="features__slider slider">
-        <div class="slider__toogle">
-          <h4>Simple Bookmarking</h4>
-          <h4>Speedy Searching</h4>
-          <h4>Easy Sharing</h4>
+        <div class="slider__toggle">
+          <h4 class="active">
+            <div>
+              Simple Bookmarking
+              <div class="slider__indicator"></div>
+            </div>
+          </h4>
+          <h4>
+            <div>
+              Speedy Searching
+              <div class="slider__indicator"></div>
+            </div>
+          </h4>
+          <h4>
+            <div>
+              Easy Sharing
+              <div class="slider__indicator"></div>
+            </div>
+          </h4>
         </div>
         <div class="slider__content">
           <div class="card">
@@ -197,7 +212,42 @@
       </div>
     </section>
 
-    <section class="faq">
+    <section class="faqa">
+      <div class="faq">
+        <input id="faq-a" type="checkbox" />
+        <label for="faq-a">
+          <p class="faq-heading">How do I purchase Brainitz?</p>
+          <div class="faq-arrow"></div>
+          <p class="faq-text">
+            You can purchase an individual account or a site license by emailing
+            us at welcome@brainitz.com One of our staff will be in touch shortly
+            to set-up your account. We accept credit card, purchase order, or
+            check. Learn more on our pricing page.<br /><br />We also offer
+            professional development trainings that include the opportunity to
+            pursue credit while also receiving a discounted license. If you have
+            more questions, please feel free to submit a request!
+          </p>
+        </label>
+        <input id="faq-b" type="checkbox" />
+        <label for="faq-b">
+          <p class="faq-heading">
+            Do you have professional development trainings available?
+          </p>
+          <div class="faq-arrow"></div>
+          <p class="faq-text">
+            Yes, we have professional development trainings available almost
+            every month. Teachers can take our online course that will train you
+            on the theory and practice of putting lessons online, often called
+            flipped or blended learning. These trainings also include in depth
+            instruction on how to use Brainitz.<br /><br />Online training start
+            at $45, include a 1 year subscription Brainitz, and come with 1 hour
+            of advancement credit available through Adams State University or
+            $55. For dates on upcoming trainings, email us at
+            welcome@brainitz.com. If you have more questions, please feel free
+            to submit a request!
+          </p>
+        </label>
+      </div>
       <div class="faq__header">
         <h2>Frequently Asked Questions</h2>
         <p>

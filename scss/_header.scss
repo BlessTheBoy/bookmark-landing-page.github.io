@@ -1,0 +1,186 @@
+$SoftBlue: rgb(83, 104, 223);
+$SoftRed: hsl(0, 94%, 66%);
+$GrayishBlue: rgb(145, 148, 161);
+$VeryDarkBlue: rgb(37, 43, 70);
+
+@mixin buttonStyle($text, $background) {
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  background-color: $background;
+  color: $text;
+  border: 1px solid $background;
+
+  &:hover {
+    color: $background;
+    background-color: $text;
+  }
+}
+
+// mobile design
+@media screen and (max-width: 850px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+
+    &.open {
+      position: relative;
+      z-index: 1;
+      color: white;
+      background-color: rgba(37, 43, 70, 0.9);
+
+      .logo {
+        fill: white;
+        &-name {
+          fill: white;
+        }
+        &-circle {
+          fill: white;
+        }
+        &-label {
+          fill: $VeryDarkBlue;
+        }
+      }
+
+      .toggles {
+        // position: relative;
+        #hamburger {
+          display: none;
+        }
+        #close {
+          display: inline;
+          //   transform: translateX(100%);
+        }
+      }
+    }
+
+    .toggles {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      #close {
+        display: none;
+      }
+    }
+
+    &__nav {
+      display: none;
+      opacity: 0.3;
+      transition: all ease-in-out 1s;
+      &.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0 1.5rem 2rem;
+        opacity: 1;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 84px);
+        z-index: 1;
+        color: white;
+        background-color: rgba(37, 43, 70, 0.9);
+        ul {
+          display: block;
+        }
+      }
+      ul {
+        border-top: 1px solid $GrayishBlue;
+        li {
+          width: 100%;
+          border-bottom: 1px solid $GrayishBlue;
+          padding: 1rem 0;
+          font-size: 1.3rem;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          &:last-child {
+            width: fit-content;
+            margin: 1rem auto;
+            padding: 0.5rem 2rem;
+            border-radius: 4px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+
+            &:hover {
+              color: $VeryDarkBlue;
+              background-color: white;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .nav-icons {
+        img {
+          cursor: pointer;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            opacity: 0.5;
+          }
+          &:first-child {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop design
+@media screen and (min-width: 850px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+
+    img {
+      object-fit: contain;
+    }
+    .toggles {
+      display: none;
+    }
+    &__nav {
+      .nav-icons {
+        display: none;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          margin-left: 2.5rem;
+          cursor: pointer;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          &:last-child {
+            @include buttonStyle(#fff, $SoftRed);
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
