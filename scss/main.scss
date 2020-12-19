@@ -123,10 +123,28 @@ p {
       &:not(:first-child) {
         display: none;
       }
-      img {
+      &__image {
         position: relative;
         width: 100%;
-        padding: 1rem 1.5rem 3rem;
+        padding: 1rem 1rem 0.5rem;
+        margin-bottom: 2rem;
+        img {
+          width: 100%;
+          z-index: 2;
+        }
+
+        &:before {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 80%;
+          height: 80%;
+          background-color: $SoftBlue;
+          border-top-right-radius: 1000px;
+          border-bottom-right-radius: 1000px;
+        }
       }
       &__text {
         text-align: center;
@@ -150,11 +168,31 @@ p {
 }
 
 .hero {
+  all: initial;
   margin-bottom: 4rem;
-  img {
+  &__image {
     position: relative;
     width: 100%;
-    padding: 1rem 1.5rem 3rem;
+    padding: 1rem 1rem 0.5rem;
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+      z-index: 2;
+    }
+
+    &:before {
+      content: "";
+      color: $SoftRed;
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 80%;
+      height: 80%;
+      background-color: $SoftBlue;
+      border-top-left-radius: 1000px;
+      border-bottom-left-radius: 1000px;
+    }
   }
   &__text {
     text-align: center;
@@ -295,15 +333,45 @@ p {
     flex-direction: column;
     justify-content: center;
 
-    input {
-      width: 100%;
-      border: none;
-      outline: none;
-      font-size: 0.8rem;
-      height: 40px;
-      padding: 0.6rem 1rem;
-      border-radius: 4px;
+    .input-container {
+      position: relative;
       margin-bottom: 0.7rem;
+      img,
+      p {
+        display: none;
+      }
+      &.error {
+        border: 2px solid $SoftRed;
+        border-radius: 4px;
+        background-color: $SoftRed;
+        color: white;
+        img {
+          display: inline-block;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          transform: translateY(-50%);
+        }
+        p {
+          all: initial;
+          color: white;
+          font-family: "Rubik", sans-serif;
+          font-size: 0.75rem;
+          display: block;
+          text-align: left;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 0.85rem;
+        height: 40px;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+      }
     }
     button {
       @include buttonStyle(#fff, $SoftRed);

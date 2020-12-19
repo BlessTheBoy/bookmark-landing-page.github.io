@@ -87,7 +87,9 @@
     </header>
 
     <section class="hero">
-      <img src="images/illustration-hero.svg" alt="" class="hero__image" />
+      <div class="hero__image">
+        <img src="images/illustration-hero.svg" alt="" />
+      </div>
       <div class="hero__text">
         <h1>A Simple Bookmark Manager</h1>
         <p>
@@ -133,11 +135,13 @@
         </div>
         <div class="slider__content">
           <div class="featureCard">
-            <img
-              src="images/illustration-features-tab-1.svg"
-              alt=""
-              class="featureCard__image"
-            />
+            <div class="featureCard__image">
+              <img
+                src="images/illustration-features-tab-1.svg"
+                alt=""
+                class="featureCard__image"
+              />
+            </div>
             <div class="featureCard__text">
               <h4>Bookmark in one click</h4>
               <p>
@@ -149,11 +153,13 @@
             </div>
           </div>
           <div class="featureCard">
-            <img
-              src="images/illustration-features-tab-2.svg"
-              alt=""
-              class="featureCard__image"
-            />
+            <div class="featureCard__image">
+              <img
+                src="images/illustration-features-tab-1.svg"
+                alt=""
+                class="featureCard__image"
+              />
+            </div>
             <div class="featureCard__text">
               <h4>Intelligent search</h4>
               <p>
@@ -164,11 +170,13 @@
             </div>
           </div>
           <div class="featureCard">
-            <img
-              src="images/illustration-features-tab-3.svg"
-              alt=""
-              class="featureCard__image"
-            />
+            <div class="featureCard__image">
+              <img
+                src="images/illustration-features-tab-1.svg"
+                alt=""
+                class="featureCard__image"
+              />
+            </div>
             <div class="featureCard__text">
               <h4>Share your bookmarks</h4>
               <p>
@@ -376,8 +384,16 @@
     <section class="contact">
       <p>35,000+ already joined</p>
       <h5>Stay up-to-date with what we’re doing</h5>
-      <form action="">
-        <input type="text" placeholder="Enter your email address" />
+      <form action="" id="form">
+        <div class="input-container" id="input-container">
+          <input
+            type="text"
+            placeholder="Enter your email address"
+            id="email"
+          />
+          <img src="images/icon-error.svg" alt="" />
+          <p id="errorMessage">Whoops, make sure it's an email</p>
+        </div>
         <button type="submit">Contact Us</button>
       </form>
     </section>
