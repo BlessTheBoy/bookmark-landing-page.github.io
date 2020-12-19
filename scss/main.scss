@@ -457,3 +457,53 @@ p {
     padding-bottom: 0.5rem;
   }
 }
+
+@media screen and (min-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
+  button {
+    -webkit-box-shadow: 4px 9px 10px 0px rgba(83, 104, 223, 0.1);
+    -moz-box-shadow: 4px 9px 10px 0px rgba(83, 104, 223, 0.1);
+    box-shadow: 4px 9px 10px 0px rgba(83, 104, 223, 0.1);
+  }
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0rem 2.5rem;
+
+    &__image::before {
+      margin-right: -30%;
+      width: 110%;
+    }
+
+    &__text {
+      text-align: left;
+      margin-right: 3rem;
+      padding-right: 2rem;
+      h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+      p {
+        text-align: left;
+        font-size: 1.1rem;
+        margin: 1.4rem 0;
+      }
+      .hero__buttons {
+        justify-content: left;
+        button {
+          -webkit-box-shadow: 4px 9px 10px 0px rgba(83, 104, 223, 0.1);
+          -moz-box-shadow: 4px 9px 10px 0px rgba(83, 104, 223, 0.1);
+          box-shadow: 4px 9px 10px 0px rgba(83, 104, 223, 0.1) !important;
+        }
+      }
+    }
+  }
+  .features {
+  }
+}
