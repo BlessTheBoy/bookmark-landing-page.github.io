@@ -679,6 +679,25 @@ p {
 .footer p.attribution {
   margin-bottom: 0;
   padding-bottom: 0.5rem;
+  color: white;
+}
+
+.footer p.attribution a {
+  color: white;
+}
+
+.footer p.attribution a:hover {
+  color: #fa5757;
+}
+
+.footer p.attribution a svg {
+  width: 65px;
+  margin-bottom: -8px;
+  fill: white;
+}
+
+.footer p.attribution a svg:hover {
+  fill: #fa5757;
 }
 
 @media screen and (min-width: 850px) {
@@ -884,23 +903,6 @@ p {
     margin: 0;
     margin-left: 1.5rem;
     font-size: 0.8rem;
-  }
-  .footer p.attribution {
-    color: white;
-  }
-  .footer p.attribution a {
-    color: white;
-  }
-  .footer p.attribution a:hover {
-    color: #fa5757;
-  }
-  .footer p.attribution a svg {
-    width: 65px;
-    margin-bottom: -8px;
-    fill: white;
-  }
-  .footer p.attribution a svg:hover {
-    fill: #fa5757;
   }
 }
 /*# sourceMappingURL=main.css.map */

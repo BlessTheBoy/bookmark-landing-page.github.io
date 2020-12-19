@@ -456,6 +456,22 @@ p {
   p.attribution {
     margin-bottom: 0;
     padding-bottom: 0.5rem;
+    color: white;
+    a {
+      color: white;
+      &:hover {
+        color: $SoftRed;
+      }
+
+      svg {
+        width: 65px;
+        margin-bottom: -8px;
+        fill: white;
+        &:hover {
+          fill: $SoftRed;
+        }
+      }
+    }
   }
 }
 
@@ -674,24 +690,6 @@ p {
             margin: 0;
             margin-left: 1.5rem;
             font-size: 0.8rem;
-          }
-        }
-      }
-    }
-    p.attribution {
-      color: white;
-      a {
-        color: white;
-        &:hover {
-          color: $SoftRed;
-        }
-
-        svg {
-          width: 65px;
-          margin-bottom: -8px;
-          fill: white;
-          &:hover {
-            fill: $SoftRed;
           }
         }
       }
