@@ -56,7 +56,11 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     toggle[i].classList.remove("activeToggle");
   }
-
-  slides[n - 1].style.display = "block";
-  toggle[n - 1].classList.add("activeToggle");
+  if (window.innerWidth > 850) {
+    slides[n - 1].style.display = "flex";
+    toggle[n - 1].classList.add("activeToggle");
+  } else {
+    slides[n - 1].style.display = "block";
+    toggle[n - 1].classList.add("activeToggle");
+  }
 }
