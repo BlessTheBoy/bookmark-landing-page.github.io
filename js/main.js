@@ -14,10 +14,12 @@ document.querySelector("#close").addEventListener("click", closeNav);
 function openNav() {
   header.classList.add("open");
   nav.classList.add("open");
+  document.body.style.overflow = "hidden";
 }
 function closeNav() {
   header.classList.remove("open");
   nav.classList.remove("open");
+  document.body.style.overflow = "auto";
 }
 function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
