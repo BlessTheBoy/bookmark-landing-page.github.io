@@ -44,3 +44,19 @@ function validateInput() {
     setSuccess();
   }
 }
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("featureCard");
+  var toggle = document.getElementsByClassName("slider__toggle");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < slides.length; i++) {
+    toggle[i].classList.remove("activeToggle");
+  }
+
+  slides[n - 1].style.display = "block";
+  toggle[n - 1].classList.add("activeToggle");
+}
